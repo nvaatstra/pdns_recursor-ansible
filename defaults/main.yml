@@ -93,3 +93,9 @@ pdns_rec_config: {}
 
 # Dict with overrides for the service (systemd only)
 pdns_rec_service_overrides: "{{ default_pdns_rec_service_overrides }}"
+
+# When set to True, remove PowerDNS Recursor packages and force a reinstall
+# Not recommended for regular usage; Primarily intended for 2 scenario's:
+# - Force a downgrade
+# - Automation of test scenario's where switching between versions on the same server is necessary
+pdns_rec_force_reinstall: False
